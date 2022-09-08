@@ -1,0 +1,15 @@
+.bouton-recherche-restaurant {
+  background: linear-gradient(355deg, $color-primary, $color-secondary);
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  transition: transform 700ms, background-color 500ms 250ms ease-out;
+  &:hover {
+    transform: translate3d(12px, 50%, 3em);
+    background: linear-gradient(355deg, $color-secondary, $color-primary);
+    opacity: 0.8;
+  }
+}

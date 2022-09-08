@@ -1,0 +1,19 @@
+.corps-accueil h3 {
+  padding-left: 15px;
+}
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.choix-restaurant {
+  @include menu-restaurant;
+}
+.menu-restaurant {
+  @extend %choix-restaurant;
+}
+.surplace-restaurant {
+  @extend %choix-restaurant;
+}

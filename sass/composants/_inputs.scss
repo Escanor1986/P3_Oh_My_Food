@@ -1,0 +1,10 @@
+.barre-localisation {
+  background-color: $color-location-input;
+  border-style: none;
+  height: 50px;
+}
+::placeholder {
+  text-align: center;
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
+}

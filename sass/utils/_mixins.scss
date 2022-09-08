@@ -1,0 +1,24 @@
+@mixin heading-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button-color($color: lightness-shift($color-primary)) {
+  background: $color;
+}
+
+@mixin menu-restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  background-color: rgba(153, 153, 153, 0.1);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border-color: #ffffff87;
+  border-style: ridge;
+  border: 4px;
+  box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
+}
+
