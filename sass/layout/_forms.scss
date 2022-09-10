@@ -2,11 +2,7 @@
   padding-left: 15px;
 }
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
+  @include forms-restaurants;
 }
 .choix-restaurant {
   @include menu-restaurant;
@@ -16,4 +12,287 @@
 }
 .surplace-restaurant {
   @extend %choix-restaurant;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "Raleway";
+  --heading-color: hsl(0, 0%, 7%);
+  --container-background-color: whitesmoke;
+  --date-text-color: hsl(0, 0%, 51%);
+  --liked-heart-icon-color: -webkit-gradient(linear, left top,left bottom, from( hsl(267, 66%, 60%)), to(hsl(317, 100%, 74%)));
+  --heart-icon-color: whitesmoke;
+  --title-font-weight: 800;
+  --date-font-weight: 550;
+
+  /* Cards colors */
+  --card-main-color: rgb(255, 255, 255);
+  --card-1-secondary-color: hsl(267, 66%, 60%);
+  --card-2-secondary-color: hsl(317, 100%, 74%);
+  --card-3-secondary-color:hsl(165, 56%, 74%);
+  --card-4-secondary-color: rgba(178, 180, 179, 0.79);
+}
+
+
+.container input {
+  display: none;
+}
+.title-container{
+  display: flex;
+  text-align: left;
+  background-color: whitesmoke;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.container {
+  max-width: 100em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  min-height: 30em;
+  padding: 1em 1em 1em 1em;
+  box-sizing: border-box;
+  background-color: var(--container-background-color);
+}
+
+/* Card Styling */
+.card-div {
+  width: 20em;
+  min-height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--card-main-color);
+  margin: 0.6em;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* ======== General styling of all cards and heart divs ========== */
+.img-div {
+  width: 100%;
+  height: 8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+}
+
+.img-div img {
+  border-radius: 0 50px 0 50px;
+  transform-origin: bottom;
+  transform: translateY(7.5%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* === Styling the like Icon ==== */
+.like-icon-div {
+  padding: 1em 1em 1em 1em;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 1.5em;
+  color: var(--heart-icon-color);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.like-icon-div-child {
+  /* background-color: yellow; */
+  width: 1em;
+  height: 1em;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.heart-empty {
+  position: absolute;
+  left: 0;
+  opacity: 1;
+}
+
+.heart-fill {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* God of war image and heart-background*/
+.palette-gout-div {
+  background-color: var(--card-1-secondary-color);
+}
+
+.palette-gout-div img {
+  width: 100%;
+  transform: translateY(7.5%);
+  /* background-color: whitesmoke; */
+}
+
+.card-1 .like-icon-div {
+  background-color: var(--card-1-secondary-color);
+}
+
+/* Sekiro image and heart-background */
+.note-enchantee-div {
+  background-color: var(--card-2-secondary-color);
+}
+
+.note-enchantee-div img {
+  width: 100%;
+  transform: translateY(7.5%);
+}
+
+.card-2 .like-icon-div {
+  background-color: var(--card-2-secondary-color);
+}
+
+/* Dazai image and heart-background */
+.a-la-francaise-div {
+  background-color: var(--card-3-secondary-color);
+}
+
+.a-la-francaise-div img {
+  width: 100%;
+  transform: translateY(7.5%);
+}
+
+.card-3 .like-icon-div {
+  background-color: var(--card-3-secondary-color);
+}
+
+/* U4 image and heart-background*/
+.delice-sens-div {
+  background-color: var(--card-4-secondary-color);
+}
+
+.delice-sens-div img {
+  width: 100%;
+  transform: translateY(7.5%);
+}
+
+.card-4 .like-icon-div {
+  background-color: var(--card-4-secondary-color);
+}
+
+/* ======== text Container Styling general ======== */
+
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+  padding: 0 1.5em;
+  padding-top: 4em;
+  padding-bottom: 1em;
+  box-sizing: border-box;
+}
+
+.text-container .item-name,
+.text-container .date {
+  margin: 0.25em 0;
+  text-align: center;
+}
+
+.text-container .item-name {
+  font-size: 1.2em;
+  font-weight: var(--title-font-weight);
+  color: var(--heading-color);
+}
+
+.text-container .date {
+  font-size: 0.9em;
+  font-weight: var(--date-font-weight);
+  color: var(--date-text-color);
+}
+
+/* ====== Hover effects ======= */
+.card-div:hover .img-div img {
+  transform: translateY(7.5%) scale(1.2);
+  border-radius: 30%;
+  box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.12)
+}
+
+.card-div:hover {
+  transform: translate(0, -10px);
+}
+
+.like-icon-div-child:hover .heart-fill {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.like-icon-div-child:hover .heart-empty {
+  transition-delay: 0.25s;
+  opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-empty,
+#card-2-like:checked ~ .heart-empty,
+#card-3-like:checked ~ .heart-empty,
+#card-4-like:checked ~ .heart-empty {
+  opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-fill,
+#card-2-like:checked ~ .heart-fill,
+#card-3-like:checked ~ .heart-fill,
+#card-4-like:checked ~ .heart-fill {
+  animation: like-animation 0.25s ease-in-out forwards;
+}
+
+#card-1-like:not(:checked) ~ .heart-fill,
+#card-2-like:not(:checked) ~ .heart-fill,
+#card-3-like:not(:checked) ~ .heart-fill,
+#card-4-like:not(:checked) ~ .heart-fill {
+  animation: unlike-animation 0.25s ease-in-out;
+}
+
+@keyframes like-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    color: var(--liked-heart-icon-color);
+    transform: scale(0.5);
+  }
+
+  100% {
+    color: var(--liked-heart-icon-color);
+    transform: scale(1);
+  }
+}
+
+@keyframes unlike-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    color: var(--heart-icon-color);
+    transform: scale(1);
+  }
 }

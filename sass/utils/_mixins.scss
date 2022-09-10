@@ -21,4 +21,10 @@
   border: 4px;
   box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
 }
-
+@mixin forms-restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}

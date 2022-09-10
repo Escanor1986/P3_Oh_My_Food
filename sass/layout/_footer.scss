@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+
+footer {
+  width:100vw;
+  margin-top: 100px;
+}
+footer div {
+  background-color:hsl(0, 0%, 0%);
+  padding:0px;
+  color: rgb(0, 0, 0);
+  text-align:center;
+}
+svg {
+  width:100%;
+  position: relative;
+  top: 58px;
+}
+.topball {
+  background: none;
+  position: relative;
+  bottom: 100px;
+  animation: ball 1s ease-in-out;
+  animation-iteration-count:infinite;
+  animation-direction: alternate;
+  animation-delay: 0.3s;
+  cursor:pointer;
+}
+
+.wave {
+  animation: wave 8s linear;
+  animation-iteration-count:infinite;
+  fill: hsl(0, 0%, 0%);
+}
+#wave2 {
+  animation-duration: 10s;
+  animation-direction: reverse;
+  opacity: .6
+}
+#wave3 {
+  animation-duration: 13s;
+  opacity:.3;
+}
+
+@keyframes wave {
+  to {transform: translateX(-100%);}
+}
+@keyframes ball {
+  to {transform: translateY(20%);}
+}
+.menu-footer{
+    background:#000;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .menu-footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .menu-footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .menu-footer .row a:hover{
+    color:#fff;
+    }
+    
+    .menu-footer .row ul{
+    width:100%;
+    }
+    
+    .menu-footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .menu-footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .menu-footer{
+    text-align:left;
+    padding:5%;
+    }
+    .menu-footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .menu-footer .row a i{
+    margin:0% 3%;
+    }
+    }

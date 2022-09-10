@@ -6,7 +6,7 @@
     <title>Ohmyfood!</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
+      content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=0.86"
     />
     <link
       rel="stylesheet"
@@ -81,30 +81,125 @@
           <h5>Dégustez au restaurant</h5>
         </div>
       </div>
-      <h3>Restaurants</h3>
-      <div class="Restaurants">
-        <div class="menilmontant">
-        <img alt="La palette du goût - Ménilmontant" title="menilmontant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
-        <p>Nouveau</p>
-        <h4>La palette du goût</h4>
-        <h6>Ménilmontant</h6>
+      <div class="title-container"><h3>Restaurants</h3></div>
+      <div class="container">
+        <div class="card-1 card-div">
+            <div class="like-icon-div">
+                <label for="card-1-like" class="like-icon-div-child">
+                    <input type="checkbox" id="card-1-like">
+                    <i class="far fa-heart heart-empty"></i>
+                    <i class="fas fa-heart heart-fill"></i>
+                </label>
+            </div>
+            
+            <div class="palette-gout-div img-div">
+                <img src="/images/restaurants/la-palette-du-gout-accueil.jpg" alt="La palette du goût">
+            </div>
+            <div class="text-container">
+                <h2 class="item-name">La palette du goût</h2>
+                <p class="date">Ménilmontant</p>
+            </div>
         </div>
-        <img alt="La palette du goût - Ménilmontant" title="menilmontant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
-        <p>Nouveau</p>
-        <h4>La palette du goût</h4>
-        <h6>Ménilmontant</h6>
+
+        <div class="card-2 card-div">
+            <div class="like-icon-div">
+                <label for ="card-2-like" class="like-icon-div-child">
+                    <input type="checkbox" id="card-2-like">
+                    <i class="far fa-heart heart-empty"></i>
+                    <i class="fas fa-heart heart-fill"></i>
+                </label>
+            </div>
+            <div class="note-enchantee-div img-div">
+                <img src="/images/restaurants/la-note-enchantee-accueil.jpg" alt="La note enchantée">
+            </div>
+            <div class="text-container">
+                <h2 class="item-name">La note enchantée</h2>
+                <p class="date"> Charonne </p>
+            </div>
         </div>
-        <img alt="La palette du goût - Ménilmontant" title="menilmontant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
-        <p>Nouveau</p>
-        <h4>La palette du goût</h4>
-        <h6>Ménilmontant</h6>
+
+        <div class="card-3 card-div">
+            <div class="like-icon-div">
+                <label for="card-3-like" class="like-icon-div-child">
+                    <input type="checkbox" id="card-3-like">
+                    <i class="far fa-heart heart-empty"></i>
+                    <i class="fas fa-heart heart-fill"></i>
+                </label>
+            </div>
+            <div class="a-la-francaise-div img-div">
+                <img src="/images/restaurants/a-la-francaise-accueil.jpg" alt="A la française">
+            </div>
+            <div class="text-container">
+                <h2 class="item-name">À la française</h2>
+                <p class="date"> Cité Rouge </p>
+            </div>
         </div>
-        <img alt="La palette du goût - Ménilmontant" title="menilmontant" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" />
-        <p>Nouveau</p>
-        <h4>La palette du goût</h4>
-        <h6>Ménilmontant</h6>
-      </div>
-      </div>
+
+        <div class="card-4 card-div">
+            <div class="like-icon-div">
+                <label for="card-4-like" class="like-icon-div-child">
+                    <input type="checkbox" id="card-4-like">
+                    <i class="far fa-heart heart-empty"></i>
+                    <i class="fas fa-heart heart-fill"></i>
+                </label>
+            </div>
+            <div class="delice-sens-div img-div">
+                <img src="/images/restaurants/le-delice-des-sens-accueil.jpg" alt="Le délice des sens">
+            </div>
+            <div class="text-container">
+                <h2 class="item-name">Le délice des sens</h2>
+                <p class="date"> Folie-Méricourt</p>  
+            </div>
+        </div>
+    </div>
     </section>
+    
+    <footer>
+      <svg viewbox="0 0 120 28">
+       <defs> 
+         <mask id="xxx">
+           <circle cx="7" cy="12" r="40" fill="#fff" />
+         </mask>
+         
+         <filter id="goo">
+            <fegaussianblur in="sourcegraphic" stdDeviation="2" result="blur" />
+            <fecolormatrix in="blur" mode="matrix" values="
+                 1 0 0 0 0  
+                 0 1 0 0 0  
+                 0 0 1 0 0  
+                 0 0 0 13 -9" result="goo" />
+            <feBlend in="sourcegraphic" in2="goo" />
+          </filter>
+          
+          <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+        </defs> 
+      
+         <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+         <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        
+        <div class="topball">
+          <a href="Accueil.html">
+          <img alt="arrow" class="ball" src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/arrow_up_alt1-512.png" width="50"/>
+       </a> </div> 
+      </svg> 
+      </footer>
+      <div class="menu-footer">
+        <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        
+        <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+    </div>  
+
   </body>
 </html>

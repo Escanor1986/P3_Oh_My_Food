@@ -2,10 +2,13 @@ body,
 html {
   background: #002f74;
 }
+
 .spin-container {
-  display: block;
+  display: block; /* display: none pour faire disparaître */
   text-align: center;
   margin-top: 100px;
+  z-index: 1;
+  pointer-events: none;
 }
 .spin {
   border: 3px solid $color-primary;
@@ -15,7 +18,8 @@ html {
   border-radius: 50%;
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) 2;
+  animation: rotate 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
+  animation-delay: 3s;
 }
 #loader2 {
   border: 3px solid #e0edff;
@@ -25,7 +29,8 @@ html {
   top: -216px;
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) 2;
+  animation: rotate2 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
+  animation-delay: 3s;
 }
 #loader3 {
   border: 3px solid $color-secondary;
@@ -35,7 +40,8 @@ html {
   top: -452px;
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) 2;
+  animation: rotate 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
+  animation-delay: 3s;
 }
 #loader4 {
   border: 3px solid $color-third;
@@ -45,22 +51,29 @@ html {
   top: -708px;
   border-left-color: transparent;
   border-right-color: transparent;
-  animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) 2;
+  animation: rotate2 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
+  animation-delay: 3s;
 }
 @keyframes rotate {
   0% {
     transform: rotateZ(-360deg);
+    opacity: 1;
   }
   100% {
     transform: rotateZ(0deg);
+    opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes rotate2 {
   0% {
     transform: rotateZ(360deg);
+    opacity: 1;
   }
   100% {
     transform: rotateZ(0deg);
+    opacity: 0;
+    z-index: -1;
   }
 }
 #text {
@@ -69,18 +82,42 @@ html {
   font-size: 15px;
   position: relative;
   top: -857px;
-  animation: bounce 2s 2;
+  animation: slide 3s 3;
+  animation-delay: 3s;
 }
-@keyframes bounce {
+@keyframes slide {
   from {
     position: relative;
     top: -877px;
     font-size: 150%;
+    opacity: 1;
   }
 
   to {
     position: relative;
     top: -787px;
     font-size: 100%;
+    opacity: 0;
+    z-index: -1;
   }
 }
+.spin-container{
+  display: none;
+}
+
+/*
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spinout {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+*/
