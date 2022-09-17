@@ -1,0 +1,52 @@
+.background-header{
+    display: flex;
+    width: 100%;
+}
+.header-img{
+    width: 100%;
+}
+/* Coeur "like"*/
+.menu-title h1{
+    font-style: italic;
+}
+
+.top-title{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.red-heart-checkbox {
+  visibility: hidden;
+}
+.red-heart-checkbox + label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 30px;
+  padding-left: 15px;
+  transition: all 0.5s;
+}
+.red-heart-checkbox:checked + label:before {
+  content: "";
+  @include heart-like-color;
+}
+.red-heart-checkbox + label:before {
+  width: 31.5px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  margin-left: -48px;
+  margin-top: 3px;
+  font-family: FontAwesome;
+  font-size: 30px;
+  content: "";
+  transition: all 0.5s;
+  color: #888;
+}
+.red-heart-checkbox + label:hover:before {
+  transform: scale(1.2);
+}

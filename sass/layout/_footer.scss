@@ -49,31 +49,51 @@ svg {
   to {transform: translateY(20%);}
 }
 .menu-footer{
-    background:#000;
+    background:hsl(0deg 0% 21%);
     font-family: 'Play', sans-serif;
-    text-align:center;
+    text-align:left;
     }
     
     .menu-footer .row{
     width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
     }
     
     .menu-footer .row a{
     text-decoration:none;
-    color:gray;
+    color:white;
     transition:0.5s;
+    line-height:10px;
     }
-    
+    .footer-list-title{
+      font-style:oblique;
+      font-weight:900;
+      font-size:x-large;
+      padding-bottom: 15px;
+      padding-top: 10px;
+    }
+    .fa-cutlery{
+      padding-right: 8px;
+    }
+    .fa-handshake-o{
+      -webkit-transform: rotate(315deg);
+      -moz-transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
+      -o-transform: rotate(315deg);
+      transform: rotate(315deg);
+      position: relative;
+      right: 3px;
+      padding-right: 4px;
+    }
     .menu-footer .row a:hover{
     color:#fff;
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
     }
     
     .menu-footer .row ul{
     width:100%;
+    padding-bottom: 15px;
+    margin-left: 0;
+    padding-left: 5px;
     }
     
     .menu-footer .row ul li{
@@ -100,3 +120,6 @@ svg {
     margin:0% 3%;
     }
     }
+
+
+    

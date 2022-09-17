@@ -1,14 +1,15 @@
+
 body,
 html {
   background: #002f74;
 }
 
+
 .spin-container {
   display: block; /* display: none pour faire disparaître */
+  opacity: 1;
   text-align: center;
   margin-top: 100px;
-  z-index: 1;
-  pointer-events: none;
 }
 .spin {
   border: 3px solid $color-primary;
@@ -19,7 +20,6 @@ html {
   border-left-color: transparent;
   border-right-color: transparent;
   animation: rotate 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
-  animation-delay: 3s;
 }
 #loader2 {
   border: 3px solid #e0edff;
@@ -30,7 +30,6 @@ html {
   border-left-color: transparent;
   border-right-color: transparent;
   animation: rotate2 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
-  animation-delay: 3s;
 }
 #loader3 {
   border: 3px solid $color-secondary;
@@ -41,7 +40,6 @@ html {
   border-left-color: transparent;
   border-right-color: transparent;
   animation: rotate 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
-  animation-delay: 3s;
 }
 #loader4 {
   border: 3px solid $color-third;
@@ -52,26 +50,25 @@ html {
   border-left-color: transparent;
   border-right-color: transparent;
   animation: rotate2 3s cubic-bezier(0.26, 1.36, 0.74, -0.29) 3;
-  animation-delay: 3s;
 }
 @keyframes rotate {
   0% {
     transform: rotateZ(-360deg);
-    opacity: 1;
   }
   100% {
     transform: rotateZ(0deg);
-    opacity: 0;
-    z-index: -1;
   }
 }
 @keyframes rotate2 {
   0% {
     transform: rotateZ(360deg);
-    opacity: 1;
   }
   100% {
     transform: rotateZ(0deg);
+  }
+}
+@keyframes spinout {
+  100% {
     opacity: 0;
     z-index: -1;
   }
@@ -83,41 +80,49 @@ html {
   position: relative;
   top: -857px;
   animation: slide 3s 3;
-  animation-delay: 3s;
 }
 @keyframes slide {
   from {
     position: relative;
     top: -877px;
     font-size: 150%;
-    opacity: 1;
   }
 
   to {
     position: relative;
     top: -787px;
     font-size: 100%;
-    opacity: 0;
-    z-index: -1;
   }
 }
-.spin-container{
-  display: none;
+.spin-container {
+  display: block; /* display: none pour faire disparaître */
+  position: relative;
+  opacity: 1;
+  text-align: center;
+  margin-top: 100px;
+  z-index: 1;
+ &.fade-out {
+	-webkit-animation: fade-out 1s ease-out both;
+	        animation: fade-out 1s ease-out both;
+}
 }
 
-/*
-@-moz-keyframes spin {
+ @-webkit-keyframes fade-out {
   0% {
-    -moz-transform: rotate(0deg);
+    opacity: 1;
   }
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@keyframes spinout {
   100% {
     opacity: 0;
     z-index: -1;
   }
 }
-*/
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+  }
+

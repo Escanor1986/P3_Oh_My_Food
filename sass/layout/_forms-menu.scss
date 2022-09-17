@@ -1,0 +1,32 @@
+.menu{
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    text-align:left;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(153, 153, 153, 0.1);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border-color: #ffffff87;
+    border-style: ridge;
+    border: 4px;
+    box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
+    padding-left: 10px;
+}
+.description-menu{
+    display: flex;
+    justify-content:space-between;
+    padding-right: 10px;
+}
+.bouton-menu{
+    display: flex;
+    justify-content: center;
+}

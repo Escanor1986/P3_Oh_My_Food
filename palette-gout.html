@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ohmyfood!</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=0.86"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="style/main.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d2b2655f7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+
+
+    <header>
+      <div class="logo">
+        <img
+          alt="Logo Ohmyfood!"
+          title="logo de la page"
+          src="images\logo\ohmyfood-50pour100.png"
+        />
+      </div>
+      <div class="background-header">
+        <img class="header-img" alt="La palette du goût" title="background header" src="/images/restaurants/la-palette-du-gout-menu.jpg">
+      </div>
+      <div class="top-title">
+        <div class="menu-title"><h1>La palette du goût</h1></div>
+        <div class='control-group'>
+            <input checked='checked' class='red-heart-checkbox' id='red-check1' type='checkbox'>
+            <label for='red-check1'>
+            </label>
+          </div>
+      </div>
+      </header>
+        
+      <section class="corps-menu">
+        <h3>ENTREES</h3>
+        <div class="menu">
+          <div class="sub-menu">
+            <div class="check-selection"></div>
+            <p>Fricassée d'escargot</p>
+            <div class="description-menu">
+                <p>Au piment d'espelette</p>
+                <p>25€</p>
+            </div>
+          </div>
+          <div class="sub-menu">
+            <div class="check-selection"></div>
+            <p>Foie gras de canard mi-cuit</p>
+            <div class="description-menu">
+                <p>Et ses copeaux de truffes noire</p>
+                <p>35€</p>
+            </div>
+          </div>
+          <div class="sub-menu">
+            <div class="check-selection"></div>
+            <p>Oeuf au plat</p>
+            <div class="description-menu">
+                <p>Assaisonné à la truffe sur lit de</p>
+                <p>20€</p>
+            </div>
+          </div>
+        </div>
+
+            <h3>PLATS</h3>
+            <div class="menu">
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Filet de boeuf aux herbes</p>
+                <div class="description-menu">
+                    <p>Accompagné de sa ribambelle de légumes</p>
+                    <p>40€</p>
+                </div>
+              </div>
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Parmentier de queue de boeuf</p>
+                <div class="description-menu">
+                    <p>A la truffe noire sur sa purée de panais</p>
+                    <p>35€</p>
+                </div>
+              </div>
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Filet de Turbo</p>
+                <div class="description-menu">
+                    <p>Aux Agrumes</p>
+                    <p>44€</p>
+                </div>
+              </div>
+            </div>
+
+            <h3>DESSERTS</h3>
+            <div class="menu">
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Paris-Brest</p>
+                <div class="description-menu">
+                    <p>Revisité</p>
+                    <p>18€</p>
+                </div>
+              </div>
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Macaron au chocolat d'exception</p>
+                <div class="description-menu">
+                    <p>Et glace à la vanille de Madagascar</p>
+                    <p>22€</p>
+                </div>
+              </div>
+              <div class="sub-menu">
+                <div class="check-selection"></div>
+                <p>Mousse au chocolat</p>
+                <div class="description-menu">
+                    <p>Au piment d'espelette et à la truffe noire</p>
+                    <p>23€</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="explorer">
+    <button
+          title="recherche de restaurant"
+          type="submit"
+          class="bouton-recherche-menu"
+        >
+          Explorer nos restaurants
+        </button>
+        </div>
+       
+    </section>
+    
+    <footer>
+      <svg viewbox="0 0 120 28">
+       <defs> 
+         <mask id="xxx">
+           <circle cx="7" cy="12" r="40" fill="#fff" />
+         </mask>
+         
+         <filter id="goo">
+            <fegaussianblur in="sourcegraphic" stdDeviation="2" result="blur" />
+            <fecolormatrix in="blur" mode="matrix" values="
+                 1 0 0 0 0  
+                 0 1 0 0 0  
+                 0 0 1 0 0  
+                 0 0 0 13 -9" result="goo" />
+            <feBlend in="sourcegraphic" in2="goo" />
+          </filter>
+          
+          <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+        </defs> 
+      
+         <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use> 
+         <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+        
+        <div class="topball">
+          <a href="palette-gout.html">
+          <img alt="arrow" class="ball" src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/arrow_up_alt1-512.png" width="50"/>
+       </a> </div> 
+      </svg> 
+      </footer>
+      
+      <div class="menu-footer">
+      
+        
+        <div class="row">
+        <ul>
+        <li class="footer-list-title"><a href="#">ohmyfood</a></li>
+        <li><i class="fa fa-cutlery" aria-hidden="true" style="color:white ;"></i>
+          <a href="#">Proposer un restaurant</a></li>
+        <li><i class="fa fa-handshake-o" aria-hidden="true" style="color:white ;"></i>
+          <a href="#">Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+    </div>  
+
+  </body>
+</html>

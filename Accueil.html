@@ -26,13 +26,14 @@
     ></script>
   </head>
   <body>
+
     <div class="spin-container">
       <div class="spin" id="loader"></div>
       <div class="spin" id="loader2"></div>
       <div class="spin" id="loader3"></div>
       <div class="spin" id="loader4"></div>
       <span id="text">LOADING...</span>
-    </div>
+
 
     <header>
       <div class="logo">
@@ -69,21 +70,27 @@
       <h3>Fonctionnement</h3>
       <div class="fonctionnement">
         <div class="choix-restaurant">
-          <i class="fa fa-location-dot"></i>
-          <h5>Choisissez un restaurant</h5>
+          <p class="selection-order">1</p>
+          <i class="fa fa-tablet" aria-hidden="true"></i>
+          <h4>Choisissez un restaurant</h4>
         </div>
         <div class="menu-restaurant">
-          <i class="fa fa-location-dot"></i>
-          <h5>Composez votre menu</h5>
+          <p class="selection-order">2</p>
+          <i class="fa fa-list-ul" aria-hidden="true"></i>
+          <h4>Composez votre menu</h4>
         </div>
         <div class="surplace-restaurant">
-          <i class="fa fa-location-dot"></i>
-          <h5>Dégustez au restaurant</h5>
+          <p class="selection-order">3</p>
+          <i class='fas fa-store'></i>
+          <h4>Dégustez au restaurant</h4>
         </div>
       </div>
       <div class="title-container"><h3>Restaurants</h3></div>
       <div class="container">
         <div class="card-1 card-div">
+          <div class="box">
+            <div class="ribbon"><span>Nouveau</span></div>
+         
             <div class="like-icon-div">
                 <label for="card-1-like" class="like-icon-div-child">
                     <input type="checkbox" id="card-1-like">
@@ -92,16 +99,20 @@
                 </label>
             </div>
             
-            <div class="palette-gout-div img-div">
+            <div class="palette-gout-div img-div img-div-anime">
                 <img src="/images/restaurants/la-palette-du-gout-accueil.jpg" alt="La palette du goût">
             </div>
             <div class="text-container">
                 <h2 class="item-name">La palette du goût</h2>
                 <p class="date">Ménilmontant</p>
             </div>
+          </div>
         </div>
 
         <div class="card-2 card-div">
+          <div class="box">
+            <div class="ribbon"><span>Nouveau</span></div>
+         
             <div class="like-icon-div">
                 <label for ="card-2-like" class="like-icon-div-child">
                     <input type="checkbox" id="card-2-like">
@@ -115,6 +126,7 @@
             <div class="text-container">
                 <h2 class="item-name">La note enchantée</h2>
                 <p class="date"> Charonne </p>
+            </div>
             </div>
         </div>
 
@@ -178,27 +190,31 @@
          <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
         
         <div class="topball">
-          <a href="Accueil.html">
+          <a href="accueil.html">
           <img alt="arrow" class="ball" src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/arrow_up_alt1-512.png" width="50"/>
        </a> </div> 
       </svg> 
       </footer>
+      
       <div class="menu-footer">
-        <div class="row">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        </div>
+      
         
         <div class="row">
         <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Career</a></li>
+        <li class="footer-list-title"><a href="#">ohmyfood</a></li>
+        <li><i class="fa fa-cutlery" aria-hidden="true" style="color:white ;"></i>
+          <a href="#">Proposer un restaurant</a></li>
+        <li><i class="fa fa-handshake-o" aria-hidden="true" style="color:white ;"></i>
+          <a href="#">Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
         </ul>
+        <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
     </div>  
 
   </body>

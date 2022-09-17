@@ -4,16 +4,91 @@
 .fonctionnement {
   @include forms-restaurants;
 }
-.choix-restaurant {
+.choix-restaurant  {
   @include menu-restaurant;
+  animation: comin 1s ease-in-out 2s 1 normal forwards;
+  &:hover{
+    background-color: hsl(268deg 96% 96%);
+    color: $color-primary;
+      }
+}
+@keyframes comin {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.choix-restaurant h4{
+  padding-left: 40px;
+  padding-right: 30px;
 }
 .menu-restaurant {
   @extend %choix-restaurant;
+  animation: comin 1s ease-in-out 1.5s 1 normal forwards;
+  &:hover{
+    background-color: hsl(268deg 96% 96%);
+    color: $color-primary;
+      }
+}
+@keyframes comin {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.menu-restaurant h4{
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .surplace-restaurant {
   @extend %choix-restaurant;
+  animation: comin 1s ease-in-out 1s 1 normal forwards;
+  &:hover{
+    background-color: hsl(268deg 96% 96%);
+    color: $color-primary;
+      }
 }
+@keyframes comin {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
 
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.surplace-restaurant h4{
+  padding-left: 40px;
+  padding-right: 30px;
+}
+.selection-order{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background:$color-primary; 
+  color: white;
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  position: relative;
+  right: 50px;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap");
 
@@ -23,7 +98,6 @@
   --heading-color: hsl(0, 0%, 7%);
   --container-background-color: whitesmoke;
   --date-text-color: hsl(0, 0%, 51%);
-  --liked-heart-icon-color: -webkit-gradient(linear, left top,left bottom, from( hsl(267, 66%, 60%)), to(hsl(317, 100%, 74%)));
   --heart-icon-color: whitesmoke;
   --title-font-weight: 800;
   --date-font-weight: 550;
@@ -77,6 +151,59 @@
   transition: transform 0.2s ease-in-out;
 }
 
+/* Ruban "Nouveau" */
+
+.box {
+  width: 100%; height: 100%;
+  position: relative;
+  border: none;
+  background:transparent;
+}
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: hsl(165deg 99% 27%);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#99E3D0 0%, #99E3D0 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #99E3D0;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #99E3D0;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #99E3D0;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #99E3D0;
+}
+
+
 /* ======== General styling of all cards and heart divs ========== */
 .img-div {
   width: 100%;
@@ -88,6 +215,19 @@
   padding-top: 1rem;
   z-index: 1;
   border-radius: 0 0 10px 10px;
+  animation: myAnim 1000ms ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+    opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+    opacity: 1;
+		transform: scale(1);
+	}
 }
 
 .img-div img {
@@ -133,7 +273,6 @@
   transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-/* God of war image and heart-background*/
 .palette-gout-div {
   background-color: var(--card-1-secondary-color);
 }
@@ -141,14 +280,12 @@
 .palette-gout-div img {
   width: 100%;
   transform: translateY(7.5%);
-  /* background-color: whitesmoke; */
 }
 
 .card-1 .like-icon-div {
   background-color: var(--card-1-secondary-color);
 }
 
-/* Sekiro image and heart-background */
 .note-enchantee-div {
   background-color: var(--card-2-secondary-color);
 }
@@ -162,7 +299,6 @@
   background-color: var(--card-2-secondary-color);
 }
 
-/* Dazai image and heart-background */
 .a-la-francaise-div {
   background-color: var(--card-3-secondary-color);
 }
@@ -176,7 +312,6 @@
   background-color: var(--card-3-secondary-color);
 }
 
-/* U4 image and heart-background*/
 .delice-sens-div {
   background-color: var(--card-4-secondary-color);
 }
@@ -196,7 +331,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* background-color: yellow; */
   padding: 0 1.5em;
   padding-top: 4em;
   padding-bottom: 1em;
@@ -223,7 +357,7 @@
 
 /* ====== Hover effects ======= */
 .card-div:hover .img-div img {
-  transform: translateY(7.5%) scale(1.2);
+  transform: translateY(5%) scale(1.1);
   border-radius: 30%;
   box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.12)
 }
@@ -265,17 +399,20 @@
 
 @keyframes like-animation {
   0% {
+    opacity: 1;
     transform: scale(1);
   }
 
   50% {
-    color: var(--liked-heart-icon-color);
+    opacity: 1;
     transform: scale(0.5);
+    @include heart-like-color;
   }
 
   100% {
-    color: var(--liked-heart-icon-color);
+    opacity: 1;
     transform: scale(1);
+    @include heart-like-color;
   }
 }
 
