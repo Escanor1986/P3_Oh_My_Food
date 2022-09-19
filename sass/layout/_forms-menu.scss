@@ -8,6 +8,7 @@ body{
 .corps-menu h3{
     max-width:fit-content;
     font-weight: lighter;
+    text-align: left;
     padding-bottom: 20px;
     border-bottom: 2px solid #99e3d0;
 }
@@ -20,11 +21,10 @@ body{
 
 .sub-menu {
     display: flex;
-    flex-direction: column;
     align-content: flex-start;
     text-align:left;
-    width: 90%;
-    height: 80%;
+    justify-content: space-between;
+    width: 95%;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     border-radius: 20px;
@@ -33,11 +33,40 @@ body{
     border: 4px;
     box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
     padding-left: 10px;
-
 }
+.check-selection{
+    display: flex;
+    width: 20%;
+    border-radius:  0 20px 20px 0;
+    background-color:#9ae4d0;
+    animation-name: slide-in-right;
+    animation-duration: 1s;
+    overflow: hidden;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    /* shorthand 
+    animation: slide-in-right 1s ease 0s 1 normal none;
+    */ 
+  }
+  @keyframes slide-in-right {
+    0%{
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
 .description-menu{
     display: flex;
+    flex-direction: column;
     justify-content:space-between;
+    width: 70%;
     padding-right: 10px;
 }
 .bouton-menu{
@@ -46,8 +75,22 @@ body{
 }
 .prix-menu{
     font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 .primo-menu{
     font-weight: bold; 
+    margin-top: 5px;
     margin-bottom: 0; 
+}
+.primo-menu-bis{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.secundo-menu{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 10%;
+    padding-right: 20px;
 }
