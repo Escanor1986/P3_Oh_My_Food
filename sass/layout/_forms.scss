@@ -1,3 +1,7 @@
+a:link {
+  text-decoration: none;
+}
+
 .corps-accueil h3 {
   padding-left: 15px;
 }
@@ -87,14 +91,13 @@
   -webkit-border-radius: 70px; 
   border-radius: 70px;
   position: relative;
-  right: 50px;
+  right: 40px;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap");
+
 
 :root {
   font-size: 16px;
-  font-family: "Raleway";
   --heading-color: hsl(0, 0%, 7%);
   --container-background-color: whitesmoke;
   --date-text-color: hsl(0, 0%, 51%);
@@ -233,6 +236,7 @@
 .img-div img {
   border-radius: 0 50px 0 50px;
   transform-origin: bottom;
+  filter: drop-shadow(0 0 20px $color-explorer);
   transform: translateY(7.5%);
   transition: transform 0.3s ease-in-out;
 }
@@ -251,7 +255,6 @@
 }
 
 .like-icon-div-child {
-  /* background-color: yellow; */
   width: 1em;
   height: 1em;
   position: relative;

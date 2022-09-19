@@ -1,3 +1,16 @@
+body{
+    background-color: $color-explorer;
+}
+
+.first-menu-title {
+ padding-top: 60px;
+}
+.corps-menu h3{
+    max-width:fit-content;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #99e3d0;
+}
 .menu{
     display: flex;
   align-items: center;
@@ -12,7 +25,7 @@
     text-align:left;
     width: 90%;
     height: 80%;
-    background-color: rgba(153, 153, 153, 0.1);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     border-radius: 20px;
     border-color: #ffffff87;
@@ -20,6 +33,7 @@
     border: 4px;
     box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
     padding-left: 10px;
+
 }
 .description-menu{
     display: flex;
@@ -29,4 +43,11 @@
 .bouton-menu{
     display: flex;
     justify-content: center;
+}
+.prix-menu{
+    font-weight: bold;
+}
+.primo-menu{
+    font-weight: bold; 
+    margin-bottom: 0; 
 }
