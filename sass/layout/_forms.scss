@@ -151,7 +151,7 @@ a:link {
   box-sizing: border-box;
   border-radius: 20px;
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Ruban "Nouveau" */
@@ -216,7 +216,6 @@ a:link {
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
-  z-index: 1;
   border-radius: 0 0 10px 10px;
   animation: myAnim 1000ms ease-in-out 0s 1 normal forwards;
 }
@@ -225,20 +224,19 @@ a:link {
 	0% {
     opacity: 0;
 		transform: scale(0);
+    z-index: -1;
 	}
 
 	100% {
     opacity: 1;
 		transform: scale(1);
+    z-index: 1;
 	}
 }
 
 .img-div img {
   border-radius: 0 50px 0 50px;
-  transform-origin: bottom;
   filter: drop-shadow(0 0 20px $color-explorer);
-  transform: translateY(7.5%);
-  transition: transform 0.3s ease-in-out;
 }
 
 /* === Styling the like Icon ==== */
@@ -282,7 +280,6 @@ a:link {
 
 .palette-gout-div img {
   width: 100%;
-  transform: translateY(7.5%);
 }
 
 .card-1 .like-icon-div {
@@ -295,7 +292,6 @@ a:link {
 
 .note-enchantee-div img {
   width: 100%;
-  transform: translateY(7.5%);
 }
 
 .card-2 .like-icon-div {
@@ -308,7 +304,6 @@ a:link {
 
 .a-la-francaise-div img {
   width: 100%;
-  transform: translateY(7.5%);
 }
 
 .card-3 .like-icon-div {
@@ -321,7 +316,6 @@ a:link {
 
 .delice-sens-div img {
   width: 100%;
-  transform: translateY(7.5%);
 }
 
 .card-4 .like-icon-div {
@@ -359,15 +353,12 @@ a:link {
 }
 
 /* ====== Hover effects ======= */
-.card-div:hover .img-div img {
-  transform: translateY(5%) scale(1.1);
-  border-radius: 30%;
-  box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.12)
+.card-div:hover{
+  transform: translateY(5%);
+  box-shadow: 8px 8px 8px 3px rgba(0, 0, 0, 0.12);
+  transform: translate(0, -10px) scale(1.1);
 }
 
-.card-div:hover {
-  transform: translate(0, -10px);
-}
 
 .like-icon-div-child:hover .heart-fill {
   opacity: 1;
@@ -402,18 +393,15 @@ a:link {
 
 @keyframes like-animation {
   0% {
-    opacity: 1;
     transform: scale(1);
   }
 
   50% {
-    opacity: 1;
     transform: scale(0.5);
     @include heart-like-color;
   }
 
   100% {
-    opacity: 1;
     transform: scale(1);
     @include heart-like-color;
   }
@@ -421,17 +409,14 @@ a:link {
 
 @keyframes unlike-animation {
   0% {
-    opacity: 1;
     transform: scale(1);
   }
 
   50% {
-    opacity: 1;
     transform: scale(0.5);
   }
 
   100% {
-    opacity: 1;
     color: var(--heart-icon-color);
     transform: scale(1);
   }

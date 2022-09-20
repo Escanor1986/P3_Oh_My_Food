@@ -10,6 +10,7 @@ body{
     font-weight: lighter;
     text-align: left;
     padding-bottom: 20px;
+    padding-left: 10px;
     border-bottom: 2px solid #99e3d0;
 }
 .menu{
@@ -18,7 +19,10 @@ body{
   flex-direction: column;
   padding-bottom: 30px;
 }
+p{
+    text-overflow: ellipsis;
 
+}
 .sub-menu {
     display: flex;
     align-content: flex-start;
@@ -36,32 +40,69 @@ body{
 }
 .check-selection{
     display: flex;
-    width: 20%;
+    width: 0%;
+    z-index: -1;
+    opacity:0;
     border-radius:  0 20px 20px 0;
     background-color:#9ae4d0;
-    animation-name: slide-in-right;
-    animation-duration: 1s;
-    overflow: hidden;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    /* shorthand 
-    animation: slide-in-right 1s ease 0s 1 normal none;
-    */ 
+}
+.secundo-menu{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 10%;
+    padding-right: 5px;
+    padding-left: 80px;
+}
+ .sub-menu:hover{
+    .check-selection{
+        display:flex;
+        width: 20%;
+        border-radius:  0 20px 20px 0;
+        background-color:#9ae4d0;
+        animation: roll-in-right 1s ease 0s 1 normal forwards;
+ }   
   }
-  @keyframes slide-in-right {
+  @keyframes roll-in-right {
     0%{
-      transform: translateX(1000px);
+      transform: translateX(100px) rotate(540deg);
       opacity: 0;
+      z-index: -1;
+      width: 0%;
     }
     100%{
-      transform: translateX(0);
+      transform: translateX(0) rotate(0deg);
       opacity: 1;
+      z-index: 1;
+      width: 20%;;
     }
   }
-  
+
+.sub-menu:not(:hover){
+    .check-selection{
+        display:flex;
+        width: 0%;
+        border-radius:  0 20px 20px 0;
+        background-color:#9ae4d0;
+        animation: roll-out-right 1s ease 0s 1 normal backwards;
+ } 
+} 
+  @keyframes roll-out-right {
+    0%{
+        transform: translateX(0) rotate(0deg);
+      opacity: 1;
+      z-index: 1;
+      width: 20%;
+      
+    }
+    100%{
+        transform: translateX(100px) rotate(540deg);
+        opacity: 0;
+        z-index: -1;
+        width: 0%;
+    }
+  }
+
 .description-menu{
     display: flex;
     flex-direction: column;
@@ -86,11 +127,4 @@ body{
 .primo-menu-bis{
     margin-top: 0;
     margin-bottom: 5px;
-}
-.secundo-menu{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 10%;
-    padding-right: 20px;
 }
