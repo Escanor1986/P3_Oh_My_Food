@@ -671,13 +671,83 @@ img .ball {
 .barre-localisation {
   background-color: hsl(0deg, 0%, 92%);
   border-style: none;
-  height: 50px;
+  height: 40px;
 }
 
 ::placeholder {
   text-align: center;
   font-weight: bold;
   color: hsl(0deg, 0%, 0%);
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+  left: 8px;
+  top: 13px;
+}
+
+.bar span {
+  position: absolute;
+  width: 45px;
+  height: 7px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  left: 0;
+}
+
+.bar span.top {
+  top: 0;
+}
+
+.bar span.middle {
+  top: 17px;
+}
+
+.bar span.bottom {
+  bottom: 0;
+}
+
+input[type]:checked ~ span.top {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 48px;
+  left: 5px;
+}
+
+input[type]:checked ~ span.bottom {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  width: 48px;
+  bottom: -1px;
+  -webkit-box-shadow: 0 0 10px #495057;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.middle {
+  -webkit-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
 button {
@@ -955,10 +1025,6 @@ body {
   padding-bottom: 30px;
 }
 
-p {
-  text-overflow: ellipsis;
-}
-
 .sub-menu {
   display: flex;
   align-content: flex-start;
@@ -999,6 +1065,9 @@ p {
   border-radius: 0 20px 20px 0;
   background-color: #9ae4d0;
   animation: roll-in-right 1s ease 0s 1 normal forwards;
+}
+.sub-menu:hover .primo-menu, .sub-menu:hover .primo-menu-bis {
+  width: 200px;
 }
 
 @keyframes roll-in-right {
@@ -1042,7 +1111,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 70%;
-  padding-right: 10px;
 }
 
 .bouton-menu {
@@ -1060,11 +1128,21 @@ p {
   font-weight: bold;
   margin-top: 5px;
   margin-bottom: 0;
+  width: 230px;
+  max-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .primo-menu-bis {
   margin-top: 0;
   margin-bottom: 5px;
+  width: 240px;
+  max-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*# sourceMappingURL=main.css.map */
