@@ -1,3 +1,4 @@
+
 .container-loader{
     margin: 0;
     padding: 0;
@@ -23,6 +24,9 @@
       opacity: 1;
       z-index: 1;
     }
+    75%{
+        opacity: 0.8;
+    }
     100%{
       transform: rotate(0);
       opacity: 0;
@@ -34,6 +38,9 @@
       transform: rotate(-720deg);
       opacity: 1;
       z-index: 1;
+    }
+    75%{
+        opacity: 0.8;
     }
     100%{
       transform: rotate(0);
