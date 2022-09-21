@@ -35,56 +35,18 @@ body {
   cursor: pointer;
 }
 
-.container-loader {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: transparent;
-  animation: rotate-out-center 5s ease 0s 1 normal forwards;
-}
-
-.loader {
-  position: relative;
-  width: 350px;
-  height: 350px;
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #f1f1f1;
+  border: solid white 10px;
   border-radius: 50%;
-  background: linear-gradient(#9256dc, #ff7ad9, #98e2cf);
-  animation: rotate-out-center 5s ease 0s 1 normal forwards;
 }
 
-@keyframes rotate-out-center {
-  0% {
-    transform: rotate(-1800deg);
-    opacity: 1;
-    z-index: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: rotate(0);
-    opacity: 0;
-    z-index: -99999;
-  }
-}
-@keyframes rotate-out-center {
-  0% {
-    transform: rotate(-720deg);
-    opacity: 1;
-    z-index: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: rotate(0);
-    opacity: 0;
-    z-index: -99999;
-  }
-}
 .loader span {
   position: absolute;
   width: 100%;
@@ -109,18 +71,74 @@ body {
   filter: blur(50px);
 }
 
-.loader:after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background: #f1f1f1;
-  border: solid white 10px;
-  border-radius: 50%;
+.container-loader {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 1;
 }
 
+.loader {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: linear-gradient(#9256dc, #ff7ad9, #98e2cf);
+  animation: rotate-out-center 5s ease 0s 1 normal forwards;
+}
+
+body:hover .container-loader {
+  animation: rotate-out-center-container 5s ease 0s 1 normal forwards;
+  width: 0%;
+  height: 0%;
+}
+body:hover .loader {
+  width: 0%;
+  height: 0%;
+}
+
+@keyframes rotate-out-center-container {
+  0% {
+    transform: rotate(-1800deg);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+  }
+  75% {
+    width: 80%;
+    height: 80%;
+    opacity: 0.8;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    transform: rotate(0);
+    opacity: 0;
+    z-index: -99999;
+  }
+}
+@keyframes rotate-out-center {
+  0% {
+    transform: rotate(-720deg);
+    opacity: 1;
+    z-index: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 0;
+    z-index: -99999;
+  }
+}
 /*
 body:target{
     &.loader{
