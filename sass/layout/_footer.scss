@@ -27,7 +27,27 @@ img .ball{
   animation-delay: 0.3s;
   cursor:pointer;
 }
-
+@media screen{ 
+  @media (min-width: 500px) and (max-width: 800px) {
+    .topball {
+      bottom: 150px;
+    }
+}
+}
+@media screen{ 
+  @media (min-width: 801px) and (max-width: 1200px) {
+    .topball {
+      bottom: 200px;
+    }
+}
+}
+@media screen{ 
+  @media (min-width: 1201px) and (max-width: 3000px) {
+    .topball {
+      bottom: 250px;
+    }
+}
+}
 .wave {
   animation: wave 8s linear;
   animation-iteration-count:infinite;

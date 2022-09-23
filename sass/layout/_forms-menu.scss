@@ -20,6 +20,13 @@ padding-top: 20px;
 padding-bottom: 0;
 margin-bottom: 0;
 }
+@media screen{ 
+  @media (min-width: 500px) and (max-width: 3000px) {
+    .top-title{
+      justify-content: space-around;
+    }
+}
+}
 
 /* Coeur "like"*/
 .red-heart-checkbox {
@@ -134,7 +141,7 @@ margin-bottom: 0;
       width: 20%;;
     }
   }
-
+/*
 .sub-menu:not(:hover){
     .check-selection{
         display:flex;
@@ -159,7 +166,7 @@ margin-bottom: 0;
         width: 0%;
     }
   }
-
+*/
 .description-menu{
     display: flex;
     flex-direction: column;
