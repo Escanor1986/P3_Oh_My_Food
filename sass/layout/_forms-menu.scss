@@ -1,9 +1,65 @@
 body{
     background-color: $color-explorer;
 }
+.menu-title h1{
+  font-style: italic;
+}
+.top-title{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+background-color: $color-explorer;
+border-radius: 50px 50px 0px 0px; 
+border: 2px solid $color-explorer;
+position:relative;
+bottom: 60px;
+width: 100%;
+padding-left: 20px;
+padding-right: 10px;
+padding-top: 20px;
+padding-bottom: 0;
+margin-bottom: 0;
+}
 
+/* Coeur "like"*/
+.red-heart-checkbox {
+  visibility: hidden;
+}
+.red-heart-checkbox + label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 30px;
+  padding-left: 15px;
+  transition: all 0.5s;
+}
+.red-heart-checkbox:checked + label:before {
+  content: "";
+  
+}
+.red-heart-checkbox + label:before {
+  width: 31.5px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  margin-left: -48px;
+  margin-top: 3px;
+  font-family: FontAwesome;
+  font-size: 30px;
+  content: "";
+  transition: all 0.5s;
+  @include heart-like-color;
+}
+.red-heart-checkbox + label:hover:before {
+  transform: scale(1.2);
+}
 .first-menu-title {
- padding-top: 60px;
+ padding-top: 0;
+ margin-top: 0;
+ padding-top: 0;
 }
 .corps-menu h3{
     max-width:fit-content;
@@ -26,6 +82,7 @@ body{
     text-align:left;
     justify-content: space-between;
     width: 95%;
+    min-height: 60px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     border-radius: 20px;
