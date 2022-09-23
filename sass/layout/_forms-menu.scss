@@ -202,3 +202,14 @@ margin-bottom: 0;
     overflow: hidden; 
     text-overflow: ellipsis;
 }
+@media screen{ 
+  @media (min-width: 450px) and (max-width: 3000px) {
+    .primo-menu{
+      width: 290px;
+      
+  }
+  .primo-menu-bis{
+      width: 290px;
+  }
+}
+}
