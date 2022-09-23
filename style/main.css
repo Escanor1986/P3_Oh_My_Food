@@ -97,10 +97,12 @@ body:hover .container-loader {
   animation: rotate-out-center-container 5s ease 0s 1 normal forwards;
   width: 0%;
   height: 0%;
+  z-index: -1;
 }
 body:hover .loader {
   width: 0%;
   height: 0%;
+  z-index: -1;
 }
 
 @keyframes rotate-out-center-container {
@@ -320,7 +322,7 @@ a:link {
 }
 
 :root {
-  font-size: 16px;
+  font-size: 14px;
   --heading-color: hsl(0, 0%, 7%);
   --container-background-color: whitesmoke;
   --date-text-color: hsl(0, 0%, 51%);
@@ -500,7 +502,7 @@ a:link {
 .heart-fill {
   position: absolute;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   transform: scale(0);
   transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
 }
@@ -611,6 +613,13 @@ a:link {
 #card-3-like:checked ~ .heart-fill,
 #card-4-like:checked ~ .heart-fill {
   animation: like-animation 0.25s ease-in-out forwards;
+  background: -moz-linear-gradient(top, #9256dc, #ff7ad9);
+  background: -webkit-linear-gradient(top, #9256dc, #ff7ad9);
+  background: linear-gradient(to bottom, #9256dc, #ff7ad9);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #card-1-like:not(:checked) ~ .heart-fill,
@@ -618,6 +627,13 @@ a:link {
 #card-3-like:not(:checked) ~ .heart-fill,
 #card-4-like:not(:checked) ~ .heart-fill {
   animation: unlike-animation 0.25s ease-in-out;
+  background: -moz-linear-gradient(top, #9256dc, #ff7ad9);
+  background: -webkit-linear-gradient(top, #9256dc, #ff7ad9);
+  background: linear-gradient(to bottom, #9256dc, #ff7ad9);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes like-animation {

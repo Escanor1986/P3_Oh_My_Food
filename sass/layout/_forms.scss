@@ -97,7 +97,7 @@ a:link {
 
 
 :root {
-  font-size: 16px;
+  font-size: 14px;
   --heading-color: hsl(0, 0%, 7%);
   --container-background-color: whitesmoke;
   --date-text-color: hsl(0, 0%, 51%);
@@ -269,7 +269,7 @@ a:link {
 .heart-fill {
   position: absolute;
   left: 0;
-  opacity: 0;
+  opacity: 1;
   transform: scale(0);
   transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
 }
@@ -382,6 +382,7 @@ a:link {
 #card-3-like:checked ~ .heart-fill,
 #card-4-like:checked ~ .heart-fill {
   animation: like-animation 0.25s ease-in-out forwards;
+  @include heart-like-color;
 }
 
 #card-1-like:not(:checked) ~ .heart-fill,
@@ -389,6 +390,7 @@ a:link {
 #card-3-like:not(:checked) ~ .heart-fill,
 #card-4-like:not(:checked) ~ .heart-fill {
   animation: unlike-animation 0.25s ease-in-out;
+  @include heart-like-color;
 }
 
 @keyframes like-animation {
