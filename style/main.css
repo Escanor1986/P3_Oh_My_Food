@@ -2,6 +2,7 @@
 /* couleurs principales */
 /* couleur header */
 /* List */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .surplace-restaurant, .menu-restaurant {
   display: flex;
   align-items: center;
