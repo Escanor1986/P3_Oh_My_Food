@@ -1103,6 +1103,7 @@ body {
 
 .menu-title h1 {
   font-style: italic;
+  font-family: "Shrikhand";
 }
 
 .top-title {
@@ -1234,7 +1235,7 @@ body {
   stroke-dashoffset: 166;
   stroke-width: 2;
   stroke-miterlimit: 10;
-  stroke: transparent;
+  stroke: white;
   fill: none;
   animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
   animation-delay: 1s;
@@ -1242,15 +1243,16 @@ body {
 }
 
 .checkmark {
-  width: 56px;
-  height: 56px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: -10px;
-  left: 20px;
+  top: 5px;
+  left: 10px;
   border-radius: 50%;
   display: block;
   stroke-width: 2;
-  stroke: #fff;
+  stroke: #99e3d0;
+  background-color: white;
   stroke-miterlimit: 10;
   margin: 10% auto;
   animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
@@ -1258,6 +1260,61 @@ body {
   animation-play-state: paused;
 }
 
+@media screen and (min-width: 500px) and (max-width: 740px) {
+  .checkmark {
+    top: 0px;
+  }
+}
+@media screen and (min-width: 741px) and (max-width: 980px) {
+  .checkmark {
+    top: -5px;
+  }
+}
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+  .checkmark {
+    top: -10px;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1450px) {
+  .checkmark {
+    top: -15px;
+  }
+}
+@media screen and (min-width: 1451px) and (max-width: 1700px) {
+  .checkmark {
+    top: -20px;
+  }
+}
+@media screen and (min-width: 1701px) and (max-width: 1950px) {
+  .checkmark {
+    top: -25px;
+  }
+}
+@media screen and (min-width: 1951px) and (max-width: 2200px) {
+  .checkmark {
+    top: -30px;
+  }
+}
+@media screen and (min-width: 2201px) and (max-width: 2450px) {
+  .checkmark {
+    top: -35px;
+  }
+}
+@media screen and (min-width: 2451px) and (max-width: 2700px) {
+  .checkmark {
+    top: -40px;
+  }
+}
+@media screen and (min-width: 2701px) and (max-width: 2850px) {
+  .checkmark {
+    top: -45px;
+  }
+}
+@media screen and (min-width: 2851px) and (max-width: 3000px) {
+  .checkmark {
+    top: -50px;
+  }
+}
 .checkmark__check {
   transform-origin: 50% 50%;
   stroke-dasharray: 48;
