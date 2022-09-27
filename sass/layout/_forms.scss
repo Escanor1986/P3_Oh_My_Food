@@ -2,7 +2,7 @@ a:link {
   text-decoration: none;
 }
 
-.corps-accueil h3 {
+section h3 {
   padding-left: 15px;
 }
 .fonctionnement {
@@ -16,6 +16,12 @@ a:link {
     color: $color-primary;
       }
 }
+.fonctionnement:hover{
+  h4{
+  color: black;
+  }
+}
+
 @keyframes comin {
 	0% {
 		opacity: 0;

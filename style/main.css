@@ -199,7 +199,7 @@ a:link {
   text-decoration: none;
 }
 
-.corps-accueil h3 {
+section h3 {
   padding-left: 15px;
 }
 
@@ -229,6 +229,10 @@ a:link {
 .choix-restaurant:hover {
   background-color: hsl(268deg, 96%, 96%);
   color: #9256dc;
+}
+
+.fonctionnement:hover h4 {
+  color: black;
 }
 
 @keyframes comin {
@@ -675,7 +679,7 @@ footer div {
 svg {
   width: 100%;
   position: relative;
-  top: 58px;
+  top: 63px;
 }
 
 img .ball {
@@ -737,12 +741,14 @@ img .ball {
 }
 .menu-footer {
   background: hsl(0deg, 0%, 21%);
-  font-family: "Play", sans-serif;
+  font-family: "roboto";
   text-align: left;
 }
 
 .menu-footer .row {
   width: 100%;
+  background-color: hsl(0deg, 0%, 0%);
+  overflow: hidden;
 }
 
 .menu-footer .row a {
@@ -1231,20 +1237,21 @@ body {
 }
 
 .checkmark__circle {
+  position: absolute;
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
   stroke-width: 2;
   stroke-miterlimit: 10;
   stroke: white;
   fill: none;
-  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-  animation-delay: 1s;
+  animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+  animation-delay: 0.2s;
   animation-play-state: paused;
 }
 
 .checkmark {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 5px;
   left: 10px;
@@ -1255,9 +1262,11 @@ body {
   background-color: white;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
-  animation-delay: 1s;
+  animation: roll-checkmark 0.5s linear 1 normal forwards;
+  /*animation: fill 1s ease-in-out 1s forwards, scale .3s ease-in-out .9s both;*/
+  animation-delay: 0.2s;
   animation-play-state: paused;
+  z-index: -3;
 }
 
 @media screen and (min-width: 500px) and (max-width: 740px) {
@@ -1320,7 +1329,7 @@ body {
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-  animation-delay: 1s;
+  animation-delay: 0.2s;
   animation-play-state: paused;
 }
 
@@ -1328,7 +1337,7 @@ body {
   display: flex;
   width: 20%;
   border-radius: 0 20px 20px 0;
-  animation: roll-in-right 1s ease 0s 1 normal forwards;
+  animation: slide-in-right 0.6s linear 0s 1 normal forwards;
 }
 .sub-menu:hover .primo-menu, .sub-menu:hover .primo-menu-bis {
   width: 200px;
@@ -1343,20 +1352,6 @@ body {
   animation-play-state: running;
 }
 
-@keyframes roll-in-right {
-  0% {
-    transform: translateX(100px) rotate(540deg);
-    opacity: 0;
-    z-index: -1;
-    width: 0%;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-    z-index: 1;
-    width: 20%;
-  }
-}
 @keyframes stroke {
   100% {
     stroke-dashoffset: 0;
@@ -1370,9 +1365,35 @@ body {
     transform: scale3d(1.1, 1.1, 1);
   }
 }
+/*
 @keyframes fill {
   100% {
     box-shadow: inset 0px 0px 0px 30px transparent;
+  }
+}
+*/
+@keyframes roll-checkmark {
+  0% {
+    transform: rotate(-720deg);
+    z-index: -3;
+  }
+  100% {
+    transform: rotate(0deg);
+    z-index: 4;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+    z-index: -1;
+    width: 0%;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+    width: 20%;
   }
 }
 /*

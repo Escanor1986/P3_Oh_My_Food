@@ -12,7 +12,7 @@ footer div {
 svg {
   width:100%;
   position: relative;
-  top: 58px;
+  top: 63px;
 }
 img .ball{
   filter: drop-shadow(0 0 20px white);
@@ -72,12 +72,14 @@ img .ball{
 }
 .menu-footer{
     background:hsl(0deg 0% 21%);
-    font-family: 'Play', sans-serif;
+    font-family: 'roboto';
     text-align:left;
     }
     
     .menu-footer .row{
     width:100%;
+    background-color:hsl(0, 0%, 0%);
+    overflow: hidden;
     }
     
     .menu-footer .row a{
