@@ -1257,12 +1257,12 @@ body {
   left: 10px;
   border-radius: 50%;
   display: block;
-  stroke-width: 2;
+  stroke-width: 7;
   stroke: #99e3d0;
   background-color: white;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  animation: roll-checkmark 0.5s linear 1 normal forwards;
+  animation: roll-checkmark 0.5s linear normal forwards;
   /*animation: fill 1s ease-in-out 1s forwards, scale .3s ease-in-out .9s both;*/
   animation-delay: 0.2s;
   animation-play-state: paused;
@@ -1337,7 +1337,7 @@ body {
   display: flex;
   width: 20%;
   border-radius: 0 20px 20px 0;
-  animation: slide-in-right 0.6s linear 0s 1 normal forwards;
+  animation: slide-in-right 0.6s linear 0s normal forwards;
 }
 .sub-menu:hover .primo-menu, .sub-menu:hover .primo-menu-bis {
   width: 200px;
