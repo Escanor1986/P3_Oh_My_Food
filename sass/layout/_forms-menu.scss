@@ -90,8 +90,6 @@ margin-bottom: 0;
     text-align:left;
     justify-content: space-between;
     width: 95%;
-    max-width:100%;
-    overflow:hidden;
     min-height: 60px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
@@ -127,9 +125,6 @@ margin-bottom: 0;
   stroke-miterlimit: 10;
   stroke: white;
   fill: none;
-  animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
-  animation-delay: 0.2s;
-  animation-play-state: paused;
 }
 
 .checkmark {
@@ -145,11 +140,13 @@ margin-bottom: 0;
   background-color: white;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  animation: roll-checkmark 0.5s linear normal forwards;
-  /*animation: fill 1s ease-in-out 1s forwards, scale .3s ease-in-out .9s both;*/
-  animation-delay: 0.2s;
-  animation-play-state: paused;
   z-index: -3;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
 }
 @media screen{ 
   @media (min-width: 500px) and (max-width: 740px) {
@@ -239,38 +236,33 @@ margin-bottom: 0;
   }
 }
 }
-
-.checkmark__check {
-  transform-origin: 50% 50%;
-  stroke-dasharray: 48;
-  stroke-dashoffset: 48;
-  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-  animation-delay: 0.2s;
-  animation-play-state: paused;
-}
-
  .sub-menu:hover{
-    .check-selection{
-        display:flex;
-        width: 20%;
-        border-radius:  0 20px 20px 0;
-        animation: slide-in-right 0.6s linear 0s normal forwards;
+  .checkmark__circle {
+    animation: stroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.6s 1 normal forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .checkmark {
+    animation: roll-checkmark 0.5s linear 1 normal forwards;
+    /*animation: fill 1s ease-in-out 1s forwards, scale .3s ease-in-out .9s both;*/
+    animation-delay: 0.2s;
+    z-index: -3;
+  }
+  .checkmark__check {
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s 1 normal forwards;
+    animation-delay: 0.2s;
+  }
+  .check-selection{
+      display:flex;
+      width: 20%;
+      border-radius:  0 20px 20px 0;
+      animation: slide-in-right 0.6s linear 0s 1 normal forwards;
  }   
  .primo-menu, .primo-menu-bis{
     width: 200px;
 }
-.checkmark__circle {
-  animation-play-state: running;
-}
-
-.checkmark {
-  animation-play-state: running;
-}
-
-.checkmark__check {
-  animation-play-state: running;
-}
   }
+
   @keyframes stroke {
     100% {
       stroke-dashoffset: 0;
