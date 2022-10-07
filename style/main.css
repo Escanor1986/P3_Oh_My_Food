@@ -224,7 +224,7 @@ section h3 {
   border-style: ridge;
   border: 4px;
   box-shadow: 5px 5px 5px rgba(153, 153, 153, 0.25);
-  animation: comin 1s ease-in-out 2s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
 }
 .choix-restaurant:hover {
   background-color: hsl(268deg, 96%, 96%);
@@ -251,7 +251,7 @@ section h3 {
 }
 
 .menu-restaurant {
-  animation: comin 1s ease-in-out 1.5s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
 }
 .menu-restaurant:hover {
   background-color: hsl(268deg, 96%, 96%);
@@ -274,7 +274,7 @@ section h3 {
 }
 
 .surplace-restaurant {
-  animation: comin 1s ease-in-out 1s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
 }
 .surplace-restaurant:hover {
   background-color: hsl(268deg, 96%, 96%);

@@ -10,7 +10,7 @@ section h3 {
 }
 .choix-restaurant  {
   @include menu-restaurant;
-  animation: comin 1s ease-in-out 2s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
   &:hover{
     background-color: hsl(268deg 96% 96%);
     color: $color-primary;
@@ -40,7 +40,7 @@ section h3 {
 }
 .menu-restaurant {
   @extend %choix-restaurant;
-  animation: comin 1s ease-in-out 1.5s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
   &:hover{
     background-color: hsl(268deg 96% 96%);
     color: $color-primary;
@@ -63,7 +63,7 @@ section h3 {
 }
 .surplace-restaurant {
   @extend %choix-restaurant;
-  animation: comin 1s ease-in-out 1s 1 normal forwards;
+  animation: comin 1s ease-in-out 5.5s 1 normal forwards;
   &:hover{
     background-color: hsl(268deg 96% 96%);
     color: $color-primary;
