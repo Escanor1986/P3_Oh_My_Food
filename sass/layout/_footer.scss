@@ -9,67 +9,7 @@ footer div {
   color: rgb(0, 0, 0);
   text-align:center;
 }
-.footer-wave {
-  width:100%;
-  position: relative;
-  top: 63px;
-}
-img .ball{
-  filter: drop-shadow(0 0 20px white);
-}
-.topball {
-  background: none;
-  position: relative;
-  bottom: 100px;
-  animation: ball 1s ease-in-out;
-  animation-iteration-count:infinite;
-  animation-direction: alternate;
-  animation-delay: 0.3s;
-  cursor:pointer;
-}
-@media screen{ 
-  @media (min-width: 500px) and (max-width: 800px) {
-    .topball {
-      bottom: 150px;
-    }
-}
-}
-@media screen{ 
-  @media (min-width: 801px) and (max-width: 1200px) {
-    .topball {
-      bottom: 200px;
-    }
-}
-}
-@media screen{ 
-  @media (min-width: 1201px) and (max-width: 3000px) {
-    .topball {
-      bottom: 250px;
-    }
-}
-}
-.wave {
-  animation: wave 8s linear;
-  animation-iteration-count:infinite;
-  fill: hsl(0, 0%, 0%);
-}
-#wave2 {
-  animation-duration: 10s;
-  animation-direction: reverse;
-  opacity: .6
-}
-#wave3 {
-  animation-duration: 13s;
-  opacity:.3;
-}
 
-@keyframes wave {
-  to {transform: translateX(-100%);}
-}
-@keyframes ball {
-  to {transform: translateY(20%);
-  }
-}
 .menu-footer{
     background:black;
     font-family: 'roboto';
