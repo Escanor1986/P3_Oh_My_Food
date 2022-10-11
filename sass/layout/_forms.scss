@@ -103,26 +103,6 @@ section h3 {
   right: 40px;
 }
 
-
-
-:root {
-  font-size: 14px;
-  --heading-color: hsl(0, 0%, 7%);
-  --container-background-color: whitesmoke;
-  --date-text-color: hsl(0, 0%, 51%);
-  --heart-icon-color: whitesmoke;
-  --title-font-weight: 800;
-  --date-font-weight: 550;
-
-  /* Cards colors */
-  --card-main-color: rgb(255, 255, 255);
-  --card-1-secondary-color: hsl(267, 66%, 60%);
-  --card-2-secondary-color: hsl(317, 100%, 74%);
-  --card-3-secondary-color:hsl(165, 56%, 74%);
-  --card-4-secondary-color: rgba(178, 180, 179, 0.79);
-}
-
-
 .container input {
   display: none;
 }
